@@ -27,14 +27,6 @@ Hooks.once('init', function () {
   })
 })
 
-
-Hooks.once('setup', function () {
-  if (!game.modules.get('lib-wrapper').active) {
-    ui.notifications.error('Ruler Decimals requires the \'libWrapper\' module. Please install and activate it.')
-    return
-  }
-
-
 libWrapper.register(MODULE_ID, 'Ruler.prototype._getSegmentLabel', _getSegmentLabel_Override, "OVERRIDE")
 
 console.log(`Ruler Decimals | initialized`)
