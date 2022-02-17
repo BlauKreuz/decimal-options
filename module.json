@@ -8,7 +8,6 @@
   "compatibleCoreVersion":"0.9.249",
   
   "url": "https://github.com/BlauKreuz/decimal-options"
-  "download": "https://github.com/BlauKreuz/decimal-options/releases/download/
   "manifest": "https://raw.githubusercontent.com/BlauKreuz/decimal-options/master/module.json"
   
   "esmodules": ["scripts/decimal-options.js"],
