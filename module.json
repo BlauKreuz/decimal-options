@@ -1,0 +1,14 @@
+{
+  "name": "decimal-options",
+  "title": "Decimal Options for Rulers",
+  "description": "A simple module to adjust ruler text accuracy.",
+  "authors": [{"name": "Kurko#1535"}],
+  "version": "1.0",
+  "minimumCoreVersion": "0.8.8",
+  "esmodules": ["scripts/decimal-options.js"],
+
+
+  "dependencies": [{"name": "lib-wrapper"}]
+
+
+}
