@@ -27,6 +27,8 @@ Hooks.once('init', function () {
   })
 })
 
+Hooks.once('setup', function () {
+
 libWrapper.register(MODULE_ID, 'Ruler.prototype._getSegmentLabel', _getSegmentLabel_Override, "OVERRIDE")
 
 console.log(`Ruler Decimals | initialized`)
