@@ -6,6 +6,7 @@
   This module does not effect Foundry's default measurement templates.
   
     Accuracy options in distance units (meters, feet, etc.):  0.01 / 0.1 / 0.5 / 1
+    GM can force the setting to all players or allow players to set their own accuracy.
   
 ![DecimalOptions](https://user-images.githubusercontent.com/96351604/154564991-d162244a-ee0b-47c4-bf4f-2651f04d1bb0.png)
 
