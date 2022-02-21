@@ -11,10 +11,27 @@ function _getSegmentLabel_Override(segmentDistance, totalDistance, isTotal) {
   }
 
 Hooks.once('init', function () {
+
+    game.settings.register(MODULE_ID, 'option-permission', {
+        name: 'Can be set by:',
+        hint: 'GM can force the setting to all players or they can be allowed to change it for themselves.',
+        scope: 'world',
+        config: true,
+        type: String,
+        choices: {
+            world: 'GM only',
+            client: 'Everyone for themselves',  
+        },
+        default: 'world',
+        onChange: () => location.reload(),
+    })
+
+const optionPermission = (game.settings.get(MODULE_ID, 'option-permission'));
+
   game.settings.register(MODULE_ID, 'ruler-accuracy', {
     name: 'Ruler text accuracy:',
     hint: 'All measurements are still done with 0.01 units accuracy, but the distance texts get rounded for better visibility. Especially useful on gridless scenes.',
-    scope: 'client',
+    scope: optionPermission,
     config: true,
     type: Number,
     choices: {
@@ -31,7 +48,7 @@ Hooks.once('setup', function () {
 
 libWrapper.register(MODULE_ID, 'Ruler.prototype._getSegmentLabel', _getSegmentLabel_Override, "OVERRIDE")
 
-console.log(`Ruler Decimals | initialized`)
+console.log(`Decimal Options v1.3 | initialized`)
 })
 
 
