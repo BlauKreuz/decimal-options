@@ -1,3 +1,5 @@
+## 3.0 - 14 Mar 2026 - Foundry v13 compatibility
+
 ## 2.0 - 27 Mar 2023 - Foundry v10 compatibility
 
 ## 1.3 - 21 Feb 2022 - Permission Update
