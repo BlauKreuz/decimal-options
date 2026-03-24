@@ -1,6 +1,6 @@
 # Decimal Options for Rulers
 
-[![Discord Server](https://img.shields.io/badge/-Discord-%232c2f33?style=flat-square&logo=discord)](https://discord.gg/VCBXfE8m)
+For help and suggestions: [![Discord Server](https://img.shields.io/badge/-Discord-%232c2f33?style=flat-square&logo=discord)](https://discord.gg/VCBXfE8m)
 
   A simple module for adjusting ruler text accuracy in Foundry VTT.
   
