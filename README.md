@@ -4,7 +4,7 @@ For help and suggestions: [![Discord Server](https://img.shields.io/badge/-Disco
 
   A simple module for adjusting ruler text accuracy in Foundry VTT.
   
-  All measurements are still done with 0.01 units accuracy (Foundry default), but the distance texts get rounded for better visibility. Especially useful on gridless scenes and it also works with the ![Drag Ruler](https://github.com/manuelVo/foundryvtt-drag-ruler) module.
+  All measurements are still done with 0.01 units accuracy (Foundry default), but the distance texts get rounded for better visibility.
   
   This module does not effect Foundry's default measurement templates.
   
