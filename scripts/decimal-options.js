@@ -76,5 +76,18 @@ Hooks.once('setup', function () {
     libWrapper.register(MODULE_ID, 'Ruler.prototype._getWaypointLabelContext', _getWaypointLabelContext_Ruler_Wrapper, 'WRAPPER');
     libWrapper.register(MODULE_ID, 'foundry.canvas.placeables.tokens.TokenRuler.prototype._getWaypointLabelContext', _getWaypointLabelContext_TokenRuler_Wrapper, 'WRAPPER');
 
-    console.log(`Decimal Options v3.0 | initialized`);
+    // Some game systems (e.g. D&D 5e) register a TokenRuler subclass that overrides
+    // _getWaypointLabelContext without calling super, bypassing the base-class wrapper above.
+    // Detect that case and patch the active ruler class directly.
+    const rulerClass = CONFIG.Token.rulerClass;
+    const baseRulerClass = foundry.canvas.placeables.tokens.TokenRuler;
+    if ( rulerClass !== baseRulerClass
+            && Object.prototype.hasOwnProperty.call(rulerClass.prototype, '_getWaypointLabelContext') ) {
+        const original = rulerClass.prototype._getWaypointLabelContext;
+        rulerClass.prototype._getWaypointLabelContext = function(waypoint, state) {
+            return _getWaypointLabelContext_TokenRuler_Wrapper(original.bind(this), waypoint, state);
+        };
+    }
+
+    console.log(`Decimal Options v4.0 | initialized`);
 });
